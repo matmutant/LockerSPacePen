@@ -2,14 +2,14 @@ module bodyStylo()
 {
 	translate([0,0,100]) {
 		difference(){
-			cylinder(h = 1300, r = 50);
-			cylinder(h = 1300, r = 35);
+			cylinder(h = 1300, r = 50, $fn=6);
+			cylinder(h = 1300, r = 35, $fn=100);
 		}
 	}
 	translate([0,0,0]) {
 		difference(){
-			cylinder(h = 100, r1 = 25, r2 = 50);
-			cylinder(h = 100, r = 18);
+			cylinder(h = 100, r1 = 25, r2 = 50, $fn=6);
+			cylinder(h = 100, r = 18, $fn=100);
 		}
 	}
 }
@@ -36,15 +36,15 @@ module lockerTrace()
 	}
 }
 
-//module jimping()
-//{
-//	for (i = [120:10:280]) {
-//		rotate_extrude() translate([50,i,0]) circle (3, $fn=100);
-//	}
-//	for (i = [1250:10:1290]) {
-//		rotate_extrude() translate([50,i,0]) circle (3, $fn=100);
-//	}
-//}
+module jimping()
+{
+	for (i = [120:10:280]) {
+		rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+	}
+	for (i = [1250:10:1290]) {
+		rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+	}
+}
 
 module stylo()
 {
@@ -52,7 +52,10 @@ module stylo()
 		difference() {
 		bodyStylo();
 		lockerTrace();
-//		jimping();
+		jimping();
 		}
 		}
 }
+
+
+stylo();
