@@ -36,12 +36,23 @@ module lockerTrace()
 	}
 }
 
+//module jimping()
+//{
+//	for (i = [120:10:280]) {
+//		rotate_extrude() translate([50,i,0]) circle (3, $fn=100);
+//	}
+//	for (i = [1250:10:1290]) {
+//		rotate_extrude() translate([50,i,0]) circle (3, $fn=100);
+//	}
+//}
+
 module stylo()
 {
 		translate([0,0,0]) {
 		difference() {
 		bodyStylo();
 		lockerTrace();
+//		jimping();
 		}
 		}
 }
