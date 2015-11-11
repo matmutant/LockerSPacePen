@@ -1,6 +1,7 @@
 use <spaceRefill.scad>
 use <spaceRefillAdapter.scad>
 use <locker.scad>
+use <lockbar.scad>
 use <Pen.scad>
 use <spring.scad>
 
@@ -14,11 +15,9 @@ module spliter()
 }
 
 module content(tstatus,rstatus) {
-	//set translate([0,0,0]) to open, [0,0,60] to close
 	translate([0,0,tstatus]) {
 		translate([0,0,-20]) spaceRefill();
 		translate ([0,0,620]) color("slategrey") adapter();
-		// set rotate([0,0,0]) to open, [0,0,90] to close
 		rotate([0,0,rstatus]) {
 			translate([0,0,880]) color("Ivory") locker();
 			translate([0,0,880]) color("Ivory") lockbar();
@@ -28,14 +27,12 @@ module content(tstatus,rstatus) {
 
 // exploded view module
 module exploded() {
-	//set translate([0,0,0]) to open, [0,0,60] to close
 	translate([0,0,60]) {
 		translate([150,0,-20]) spaceRefill();
 		difference() {
 			translate ([150,0,620]) color("slategrey") adapter();
 			translate([150,-100,0]) cube([100, 100, 1600]);
 			}
-		// set rotate([0,0,0]) to open, [0,0,90] to close
 		rotate([0,0,90]) {
 			translate([0,-250,880]) color("Ivory") locker();
 			translate([0,-350,880]) color("Ivory") lockbar();
