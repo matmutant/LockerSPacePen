@@ -1,15 +1,21 @@
+//Uncomment to set cylinder resolution to balance between CPU cost and preview smoothness for this file
+//cylindrfn=30;
+
+//Uncomment to specify polygonal shape of Pen Body
+//polygonsh=7;
+
 module bodyStylo()
 {
 	translate([0,0,100]) {
 		difference(){
-			cylinder(h = 1300, r = 50, $fn=6);
-			cylinder(h = 1300, r = 35, $fn=100);
+			cylinder(h = 1300, r = 50, $fn=polygonsh);
+			cylinder(h = 1300, r = 35, $fn=cylindrfn);
 		}
 	}
 	translate([0,0,0]) {
 		difference(){
-			cylinder(h = 100, r1 = 25, r2 = 50, $fn=6);
-			cylinder(h = 100, r = 18, $fn=100);
+			cylinder(h = 100, r1 = 25, r2 = 50, $fn=polygonsh);
+			cylinder(h = 100, r = 18, $fn=cylindrfn);
 		}
 	}
 }
@@ -58,4 +64,4 @@ module stylo()
 }
 
 
-stylo();
+//stylo();

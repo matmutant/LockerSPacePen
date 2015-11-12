@@ -1,10 +1,15 @@
-use <spaceRefill.scad>
-use <spaceRefillAdapter.scad>
-use <locker.scad>
-use <lockbar.scad>
-use <Pen.scad>
-use <spring.scad>
+//set cylinder resolution to balance between CPU cost and preview smoothness in each files:
+//cylindrfn=;
+//specify polygonal shape of Pen Body
+//polygonsh=;
+polygonsh=6;
 
+include <spaceRefill.scad>
+include <spaceRefillAdapter.scad>
+include <locker.scad>
+include <lockbar.scad>
+include <Pen.scad>
+use <spring.scad>
 
 module spliter()
 {
