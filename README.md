@@ -46,7 +46,7 @@ The spring code was taken and adapted from here: http://goo.gl/4sxTqA
 
 ##Jimping
 ![Preview-jimping](./rendering/hexagon-pen.png "hexagon LockerSpacePen preview")
-NB: on the above pic, external cylinder render is limited to 6 to hex an hexagonal pen
+NB: on the above pic, external cylinder render is limited to 6 to get an hexagonal pen
 ```
 module jimping()
 {
