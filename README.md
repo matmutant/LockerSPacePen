@@ -100,3 +100,11 @@ module bodyStylo()
 Or any other polygonal shape :) by variating the $fn value.
 ```
 
+##3D Printing
+unit steps are of 0.1mm, thus if you try printing as is you'll get a 130cm pen if the printer reads the units as mm, either edit all values manually or use the following code to resize it to 130mm:
+```
+resize([13,0,0], true) {
+stylo();
+}
+``` 
+

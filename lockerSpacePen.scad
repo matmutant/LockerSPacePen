@@ -1,5 +1,6 @@
 //set cylinder resolution to balance between CPU cost and preview smoothness in each files:
 //cylindrfn=;
+cylindrfn=30;
 //specify polygonal shape of Pen Body
 //polygonsh=;
 polygonsh=6;
@@ -49,7 +50,7 @@ module exploded() {
 
 
 
-
+//resize([13,0,0], true) {
 //display splitted view closed
 translate([0,0,0]) content(60,90);
 translate([0,0,0]) color("silver") spliter();
@@ -71,7 +72,7 @@ translate([-400,0,0]) color("silver") stylo();
 // display full view opened
 translate([-600,0,0]) content(0,0);
 translate([-600,0,0]) color("silver") stylo();
-
+//}
 //display spring alone
 //springG(wire_diameter, spring_height, spring_diameter, top_twists, full_twists, bottom_twists)
 //translate([400,0,100]) springG(2.5, 168, 40, 1, 12, 1);
