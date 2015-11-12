@@ -45,6 +45,8 @@ The spring code was taken and adapted from here: http://goo.gl/4sxTqA
 
 
 ##Jimping
+![Preview-jimping](./rendering/hexagon-pen.png "hexagon LockerSpacePen preview")
+NB: on the above pic, external cylinder render is limited to 6 to hex an hexagonal pen
 ```
 module jimping()
 {
@@ -56,3 +58,45 @@ module jimping()
 	}
 }
 ```
+##[Hexa]gon Pen
+![Preview-hexagon](./rendering/hexagon-pen-splited.png "hexagon LockerSpacePen preview")
+Pen body can be either "rounded": with external cylinder with a resolution like $fn=100 or more
+```
+module bodyStylo()
+{
+	translate([0,0,100]) {
+		difference(){
+			cylinder(h = 1300, r = 50, $fn=100);
+			cylinder(h = 1300, r = 35, $fn=100);
+		}
+	}
+	translate([0,0,0]) {
+		difference(){
+			cylinder(h = 100, r1 = 25, r2 = 50, $fn=100);
+			cylinder(h = 100, r = 18, $fn=100);
+		}
+	}
+}
+```
+
+Or Hexagonal with $fn=6:
+```
+module bodyStylo()
+{
+	translate([0,0,100]) {
+		difference(){
+			cylinder(h = 1300, r = 50, $fn=6);
+			cylinder(h = 1300, r = 35, $fn=100);
+		}
+	}
+	translate([0,0,0]) {
+		difference(){
+			cylinder(h = 100, r1 = 25, r2 = 50, $fn=6);
+			cylinder(h = 100, r = 18, $fn=100);
+		}
+	}
+}
+
+Or any other polygonal shape :) by variating the $fn value.
+```
+
