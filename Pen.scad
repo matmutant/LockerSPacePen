@@ -45,10 +45,18 @@ module lockerTrace()
 module jimping()
 {
 	for (i = [120:10:280]) {
-		rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+		//rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+		translate([0,0,i]) difference() {
+			cylinder(h=3, d=110, $fn=10);
+			cylinder(h=3, d=95, $fn=100);
+		}
 	}
 	for (i = [1250:10:1290]) {
-		rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+		//rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+		translate([0,0,i]) difference() {
+			cylinder(h=3, d=110, $fn=10);
+			cylinder(h=3, d=95, $fn=100);
+		}
 	}
 }
 

@@ -47,14 +47,23 @@ The spring code was taken and adapted from here: http://goo.gl/4sxTqA
 ##Jimping
 ![Preview-jimping](./rendering/hexagon-pen.png "hexagon LockerSpacePen preview")
 NB: on the above pic, external cylinder render is limited to 6 to get an hexagonal pen
+Extruding is too CPU intensive so the code now use cynlinder difference instead:
 ```
 module jimping()
 {
 	for (i = [120:10:280]) {
-		rotate_extrude() translate([50,i,0]) circle (3, $fn=100);
+		//rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+		translate([0,0,i]) difference() {
+			cylinder(h=3, d=110, $fn=10);
+			cylinder(h=3, d=95, $fn=100);
+		}
 	}
 	for (i = [1250:10:1290]) {
-		rotate_extrude() translate([50,i,0]) circle (3, $fn=100);
+		//rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+		translate([0,0,i]) difference() {
+			cylinder(h=3, d=110, $fn=10);
+			cylinder(h=3, d=95, $fn=100);
+		}
 	}
 }
 ```
