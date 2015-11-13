@@ -9,7 +9,8 @@ This Pen is intended to stay minimalistic (the fewest possible amount of pieces)
 
 ##The tree
 Each piece is built on a separate .scad file, thus working on the pen body shape will result in only messing with the body file (Pen.scad)
-the lockerSpacePen.scad file helps having the whole view of the pen.
+
+The lockerSpacePen.scad file helps having the whole view of the pen.
 
 ##The locktrace
 The lever of the locker follows the trace below:
@@ -46,8 +47,9 @@ The spring code was taken and adapted from here: http://goo.gl/4sxTqA
 
 ##Jimping
 ![Preview-jimping](./rendering/hexagon-pen.png "hexagon LockerSpacePen preview")
-NB: on the above pic, external cylinder render is limited to 6 to get an hexagonal pen
-Extruding is too CPU intensive so the code now use cynlinder difference instead:
+NB: on the above pic, external cylinder render is limited to 6 to get an hexagonal pen.
+
+As extruding is too CPU intensive, the code now use cynlinder difference instead:
 ```
 module jimping()
 {
