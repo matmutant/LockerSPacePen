@@ -12,10 +12,10 @@ module bodyStylo()
 			cylinder(h = 130.0, r = 3.5, $fn=cylindrfn);
 		}
 	}
-	translate([0,0,0]) {
+	translate([0,0,-1.0]) {
 		difference(){
-			cylinder(h = 10.0, r1 = 2.5, r2 = 5.0, $fn=polygonsh);
-			cylinder(h = 10.0, r = 1.1, $fn=cylindrfn);
+			cylinder(h = 11.0, r1 = 2, r2 = 5.0, $fn=polygonsh);
+			cylinder(h = 11.0, r = 1.1, $fn=cylindrfn);
 		}
 	}
 }
@@ -44,18 +44,16 @@ module lockerTrace()
 
 module jimping()
 {
-	for (i = [120:10:280]) {
-		//rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+	for (i = [12:1:28]) {
 		translate([0,0,i]) difference() {
-			cylinder(h=3, d=110, $fn=10);
-			cylinder(h=3, d=95, $fn=100);
+			cylinder(h=.3, d=11.0, $fn=10);
+			cylinder(h=.3, d=9.5, $fn=100);
 		}
 	}
-	for (i = [1250:10:1290]) {
-		//rotate_extrude() translate([50,i,0]) circle (3, $fn=7);
+	for (i = [125.0:1.0:129.0]) {
 		translate([0,0,i]) difference() {
-			cylinder(h=3, d=110, $fn=10);
-			cylinder(h=3, d=95, $fn=100);
+			cylinder(h=.3, d=11.0, $fn=10);
+			cylinder(h=.3, d=9.5, $fn=100);
 		}
 	}
 }
