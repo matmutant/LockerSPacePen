@@ -6,8 +6,8 @@ module locker()
 	translate([0,0,0]) {
 		translate([0,0,0]) {
 			difference() {
-				cylinder(h = 320, r = 34, $fn=cylindrfn);
-				translate([0,0,160]) rotate([90,0,0]) cylinder (h = 35, r=20, center = false, $fn=cylindrfn);
+				cylinder(h = 32, r = 3.4, $fn=cylindrfn);
+				translate([0,0,16]) rotate([90,0,0]) cylinder (h = 3.5, r=2.0, center = false, $fn=cylindrfn);
 			}
 		}
 	}

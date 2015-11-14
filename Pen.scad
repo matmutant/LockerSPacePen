@@ -6,39 +6,39 @@
 
 module bodyStylo()
 {
-	translate([0,0,100]) {
+	translate([0,0,10.0]) {
 		difference(){
-			cylinder(h = 1300, r = 50, $fn=polygonsh);
-			cylinder(h = 1300, r = 35, $fn=cylindrfn);
+			cylinder(h = 130.0, r = 5.0, $fn=polygonsh);
+			cylinder(h = 130.0, r = 3.5, $fn=cylindrfn);
 		}
 	}
 	translate([0,0,0]) {
 		difference(){
-			cylinder(h = 100, r1 = 25, r2 = 50, $fn=polygonsh);
-			cylinder(h = 100, r = 18, $fn=cylindrfn);
+			cylinder(h = 10.0, r1 = 2.5, r2 = 5.0, $fn=polygonsh);
+			cylinder(h = 10.0, r = 1.1, $fn=cylindrfn);
 		}
 	}
 }
 
 module lockerTrace()
 {
-	translate([0,0,1040]) {
+	translate([0,0,112]) {
 		hull() {
-					rotate([90,0,0]) cylinder(h = 50, r=20.5, center = false, $fn=100);
-			translate([0,0,-50]) {
-				rotate([90,0,0]) cylinder(h = 50, r=20.5, center = false, $fn=100);
+					rotate([90,0,0]) cylinder(h = 5.0, r=2.05, center = false, $fn=100);
+			translate([0,0,-5.0]) {
+				rotate([90,0,0]) cylinder(h = 5.0, r=2.05, center = false, $fn=100);
 			}
 		}
 		hull() {
-			translate([0,0,-50]) {
-				rotate([90,0,90]) cylinder(h = 50, r=20.5, center = false, $fn=100);
+			translate([0,0,-5.0]) {
+				rotate([90,0,90]) cylinder(h = 5.0, r=2.05, center = false, $fn=100);
 			}
-			translate([0,0,60]) {
-				rotate([90,0,90]) cylinder(h = 50, r=20.5, center = false, $fn=100);
+			translate([0,0,6.0]) {
+				rotate([90,0,90]) cylinder(h = 5.0, r=2.05, center = false, $fn=100);
 			}
 		}
 
-		translate([0,-50,-70.5]) cube([50,50,41]);
+		translate([0,-5.0,-7.05]) cube([5.0,5.0,4.1]);
 	}
 }
 
