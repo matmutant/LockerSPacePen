@@ -9,7 +9,7 @@ module bodyStylo()
 	translate([0,0,10.0]) {
 		difference(){
 			cylinder(h = 130.0, r = 5.0, $fn=polygonsh);
-			cylinder(h = 130.0, r = 3.5, $fn=cylindrfn);
+			cylinder(h = 130.0, r = 3.3, $fn=cylindrfn);
 		}
 	}
 	translate([0,0,-1.0]) {
