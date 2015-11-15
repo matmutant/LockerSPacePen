@@ -4,6 +4,8 @@ cylindrfn=30;
 //specify polygonal shape of Pen Body
 //polygonsh=;
 polygonsh=6;
+//spring() uses the following arguments
+//springG(wire_diameter, spring_height, spring_diameter, top_twists, full_twists, bottom_twists)
 
 include <spaceRefill.scad>
 include <spaceRefillAdapter.scad>
