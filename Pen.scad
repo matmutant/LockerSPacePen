@@ -60,13 +60,13 @@ module jimping()
 
 module stylo()
 {
-		translate([0,0,0]) {
+		//translate([0,0,0]) {
 		difference() {
 		bodyStylo();
 		lockerTrace();
 		jimping();
 		}
-		}
+		//}
 }
 
 

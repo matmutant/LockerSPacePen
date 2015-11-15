@@ -3,12 +3,12 @@
 
 module adapter()
 {
-	translate([0,0,0]) {
-		translate([0,0,0]) {
+	//translate([0,0,0]) {
+		//translate([0,0,0]) {
 			difference() {
 				cylinder(h = 26, r = 3, $fn=cylindrfn);
 				cylinder(h = 14, r = 2.5, $fn=cylindrfn);
 			}
-		}
-	}
+		//}
+	//}
 }
