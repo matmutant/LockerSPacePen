@@ -1,18 +1,20 @@
-#LockerSpacePen
+# LockerSpacePen  
 
 ![Preview](./rendering/LockerSpacePen-full-rendering.png "full LockerSpacePen preview")
 
-##Introducing the Pen
+## Introducing the Pen
+
+/!\ It seems the scale used for the #PR4 refill is partially wrong, thus the model need rework to be 'printable' /!\  
 This is my first model created with OpenSCAD (and my first use of a CAD software btw)
 
 This Pen is intended to stay minimalistic (the fewest possible amount of pieces) but having no cap (i loose them) and a nice mechanism.
 
-##The tree
+## The tree
 Each piece is built on a separate .scad file, thus working on the pen body shape will result in only messing with the body file (Pen.scad)
 
 The lockerSpacePen.scad file helps having the whole view of the pen.
 
-##The locktrace
+## The locktrace
 The lever of the locker follows the trace below:
 ![Preview-trace](./rendering/lockTrace.png "lever trace")
 ```
@@ -40,12 +42,12 @@ module lockerTrace()
 
 ```
 
-##The Spring
+## The Spring
 The spring code was taken and adapted from here: http://goo.gl/4sxTqA
 ![Preview-spring](./rendering/point-spring.png "lever trace")
 
 
-##Jimping
+## Jimping
 ![Preview-jimping](./rendering/hexagon-pen.png "hexagon LockerSpacePen preview")
 NB: on the above pic, external cylinder render is limited to 6 to get an hexagonal pen.
 
@@ -69,7 +71,7 @@ module jimping()
 	}
 }
 ```
-##[Hexa]gon Pen
+## [Hexa]gon Pen
 ![Preview-hexagon](./rendering/hexagon-pen-splited.png "hexagon LockerSpacePen preview")
 Pen body can be either "rounded": with external cylinder with a resolution like $fn=100 or more
 ```
